@@ -27,4 +27,4 @@ Libstrangle is a frame rate limiter for Linux.
 %make_install
 
 %files
-%{_bindir}/*
+#{_bindir}/*
