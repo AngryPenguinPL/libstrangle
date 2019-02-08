@@ -29,6 +29,7 @@ Libstrangle is a frame rate limiter for Linux.
 %files
 %{_datadir}/doc/libstrangle/LICENSE
 %{_bindir}/strangle
-%{_libdir}/%{name}/*
+/usr/lib64/libstrangle/libstrangle.so
+/usr/lib/libstrangle/libstrangle.so
 /etc/ld.so.conf.d/libstrangle.conf
 
