@@ -10,7 +10,7 @@ Index: makefile
 +prefix=/usr
  bindir=$(prefix)/bin
 -libdir=$(prefix)/lib
-+libdir=$(prefix)/
++libdir=$(prefix)
  DOC_PATH=$(prefix)/share/doc/libstrangle
 -LIB32_PATH=$(libdir)/libstrangle/lib32
 -LIB64_PATH=$(libdir)/libstrangle/lib64
