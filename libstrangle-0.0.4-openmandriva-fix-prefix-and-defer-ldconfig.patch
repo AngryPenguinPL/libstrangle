@@ -14,8 +14,8 @@ Index: makefile
  DOC_PATH=$(prefix)/share/doc/libstrangle
 -LIB32_PATH=$(libdir)/libstrangle/lib32
 -LIB64_PATH=$(libdir)/libstrangle/lib64
-+LIB32_PATH=$(libdir)/lib/libstrangle/
-+LIB64_PATH=$(libdir)/lib64/libstrangle/
++LIB32_PATH=$(libdir)/lib/libstrangle
++LIB64_PATH=$(libdir)/lib64/libstrangle
  SOURCEDIR=src/
  BUILDDIR=build/
  SOURCES=$(wildcard $(SOURCEDIR)*.c)
