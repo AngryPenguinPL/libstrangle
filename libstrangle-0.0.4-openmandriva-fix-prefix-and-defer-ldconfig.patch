@@ -1,0 +1,21 @@
+Index: makefile
+===================================================================
+--- makefile
++++ makefile	2019-02-08 20:45:02.994670064 +0100
+@@ -2,7 +2,7 @@
+ CFLAGS=-rdynamic -fPIC -shared -Wall -std=c99 -fvisibility=hidden -DHOOK_DLSYM
+ LDFLAGS=-Wl,-z,relro,-z,now
+ LDLIBS=-ldl -lrt
+-prefix=/usr/local
++prefix=/usr
+ bindir=$(prefix)/bin
+ libdir=$(prefix)/lib
+ DOC_PATH=$(prefix)/share/doc/libstrangle
+@@ -33,7 +33,6 @@
+ 	install -m 0755 -D -T $(BUILDDIR)libstrangle64.so $(DESTDIR)$(LIB64_PATH)/libstrangle.so
+ 	install -m 0755 -D -T $(SOURCEDIR)strangle.sh $(DESTDIR)$(bindir)/strangle
+ 	install -m 0644 -D -T COPYING $(DESTDIR)$(DOC_PATH)/LICENSE
+-	ldconfig
+ 
+ clean:
+ 	rm -f $(BUILDDIR)libstrangle64.so
