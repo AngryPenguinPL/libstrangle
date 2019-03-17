@@ -6,15 +6,12 @@ Index: makefile
  CFLAGS=-rdynamic -fPIC -shared -Wall -std=c99 -fvisibility=hidden -DHOOK_DLSYM
  LDFLAGS=-Wl,-z,relro,-z,now
  LDLIBS=-ldl -lrt
--prefix=/usr/local
-+prefix=/usr
+ prefix=/usr/local
  bindir=$(prefix)/bin
--libdir=$(prefix)/lib
-+libdir=$(prefix)
+ libdir=$(prefix)/lib
  DOC_PATH=$(prefix)/share/doc/libstrangle
--LIB32_PATH=$(libdir)/libstrangle/lib32
--LIB64_PATH=$(libdir)/libstrangle/lib64
-+LIB32_PATH=$(libdir)/lib/libstrangle/lib32
+-LIB64_PATH=$(libdir)/lib/libstrangle/lib64
+ LIB32_PATH=$(libdir)/libstrangle/lib32
  SOURCEDIR=src/
  BUILDDIR=build/
  SOURCES=$(wildcard $(SOURCEDIR)*.c)
