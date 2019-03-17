@@ -7,7 +7,9 @@ License:        GPL3
 Group:          Games
 URL:            https://gitlab.com/torkel104/libstrangle
 Source0:        https://gitlab.com/torkel104/libstrangle/-/archive/0.0.4/libstrangle-0.0.4.tar.bz2
+%ifarch %{x86_64} %{znver} %{armx} 
 Patch0:         libstrangle-0.0.4-openmandriva-fix-prefix-and-defer-ldconfig.patch
+%endif
 %ifarch %{ix86}
 Patch1:         libstrangle-32bit.patch
 %endif
