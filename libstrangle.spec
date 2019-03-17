@@ -10,7 +10,7 @@ Source0:        https://gitlab.com/torkel104/libstrangle/-/archive/0.0.4/libstra
 %ifarch %{x86_64} %{znver} %{armx} 
 Patch0:         libstrangle-0.0.4-openmandriva-fix-prefix-and-defer-ldconfig.patch
 %endif
-%ifarch %{ix86}
+%ifarch %{ix86} %{arm}
 Patch1:         libstrangle-32bit.patch
 %endif
 
