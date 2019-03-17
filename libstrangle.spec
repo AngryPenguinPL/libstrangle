@@ -8,6 +8,9 @@ Group:          Games
 URL:            https://gitlab.com/torkel104/libstrangle
 Source0:        https://gitlab.com/torkel104/libstrangle/-/archive/0.0.4/libstrangle-0.0.4.tar.bz2
 Patch0:         libstrangle-0.0.4-openmandriva-fix-prefix-and-defer-ldconfig.patch
+%ifarch %{ix86}
+Patch1:         libstrangle-32bit.patch
+%endif
 
 BuildRequires:  glibc-devel
 BuildRequires:  clang-devel
