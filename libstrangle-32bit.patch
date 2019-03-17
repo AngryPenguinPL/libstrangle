@@ -6,12 +6,15 @@ Index: makefile
  CFLAGS=-rdynamic -fPIC -shared -Wall -std=c99 -fvisibility=hidden -DHOOK_DLSYM
  LDFLAGS=-Wl,-z,relro,-z,now
  LDLIBS=-ldl -lrt
- prefix=/usr/local
+-prefix=/usr/local
++prefix=/usr
  bindir=$(prefix)/bin
- libdir=$(prefix)/lib
+-libdir=$(prefix)/lib
++libdir=$(prefix)
  DOC_PATH=$(prefix)/share/doc/libstrangle
--LIB64_PATH=$(libdir)/lib/libstrangle/lib64
- LIB32_PATH=$(libdir)/libstrangle/lib32
+-LIB32_PATH=$(libdir)/libstrangle/lib32
+-LIB64_PATH=$(libdir)/libstrangle/lib64
++LIB32_PATH=$(libdir)/lib/libstrangle/lib32
  SOURCEDIR=src/
  BUILDDIR=build/
  SOURCES=$(wildcard $(SOURCEDIR)*.c)
@@ -50,4 +53,4 @@ Index: makefile
  	rm -f $(DESTDIR)$(LIB32_PATH)/libstrangle.so
 -	rm -f $(DESTDIR)$(LIB64_PATH)/libstrangle.so
  	rm -f $(DESTDIR)$(bindir)/strangle
- 	rm -f $(DESTDIR)$(DOC_PATH)/LICENSE
+rm -f $(DESTDIR)$(DOC_PATH)/LICENSE
